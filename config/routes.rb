@@ -1,7 +1,13 @@
 RailsSampleExpo::Application.routes.draw do
-  get "static_pages/home"
-  get "static_pages/help"
-  get "static_pages/about"
+  # get "static_pages/home"
+  # get "static_pages/help"
+  # get "static_pages/about"
+  # get "static_pages/content"
+
+  match '/sp_home', to: 'static_pages#home'
+  match '/sp_help', to: 'static_pages#help'
+  match '/sp_about', to: 'static_pages#about'
+  match '/sp_content', to: 'static_pages#content'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
