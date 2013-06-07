@@ -1,6 +1,6 @@
 RailsSampleExpo::Application.routes.draw do
   resources :users
-
+  resources :sessions, only: [:new, :create, :destroy]
 
   get "users/new"
   get "users/index"
@@ -17,6 +17,9 @@ RailsSampleExpo::Application.routes.draw do
 
   match '/new_user', to: 'users#new'
   match '/user',     to: 'users#show'
+
+  match '/sign_in',   to: 'sessions#new'
+  match '/sign_out',  to: 'sessions#destroy', via: :delete
 
   root to: 'static_pages#home'
   # match '/', to: 'static_pages#home'
