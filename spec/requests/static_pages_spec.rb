@@ -4,8 +4,8 @@ describe "Static pages \'s" do
 
   describe "Home page" do
   	before { visit sp_home_path }
-    it "should have the content 'Sample App'" do
-      page.should have_content('Sample App')
+    it "should have the content 'Helix Dan App'" do
+      page.should have_content('Helix Dan\'s App')
     end
 
     it "should have a home title" do
