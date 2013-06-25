@@ -5,7 +5,7 @@ describe "User Page \'s" do
 	subject { page }
 
   describe "should have a sign page and title" do
-  	before { visit new_user_path }
+  	before { visit sign_up_path }
   	it { should have_selector('h1',    text: 'Sign up') }
 		it { should have_selector('title', text: 'Sign up') }
   end
@@ -18,7 +18,7 @@ describe "User Page \'s" do
   end
 
   describe "signup" do
-    before { visit new_user_path }
+    before { visit sign_up_path }
     let(:submit) { "create my account" }
 
     describe "with valid information" do

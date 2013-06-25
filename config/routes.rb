@@ -15,11 +15,13 @@ RailsSampleExpo::Application.routes.draw do
   match '/sp_about',   to: 'static_pages#about'
   match '/sp_content', to: 'static_pages#content'
 
-  match '/new_user', to: 'users#new'
-  match '/user',     to: 'users#show'
+  match '/sign_up',    to: 'users#new'
+  match '/user',       to: 'users#show'
 
-  match '/sign_in',   to: 'sessions#new'
-  match '/sign_out',  to: 'sessions#destroy', via: :delete
+  match '/sign_in',    to: 'sessions#new'
+  match '/sign_out',   to: 'sessions#destroy', via: :delete
+
+
 
   root to: 'static_pages#home'
   # match '/', to: 'static_pages#home'

@@ -1,2 +1,15 @@
 <% provide(:title, 'Sign in') %>
 <h1>Sign in</h1>
+<div class="alert alert-error">Invalid...</div>
+
+<div>
+	<div class="span6 offset3">
+		<%= form_for(@user) do |f| %>
+			<>
+
+
+		<% end %>
+
+		<p>New User? <%= link_to "Sign up now!", sign_up_path %></p>
+	</div>
+</div>
